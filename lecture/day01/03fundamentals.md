@@ -49,7 +49,6 @@ What is an object?
 --
 ### Composite Types
 #### Lists  <!-- .element: class="fragment fade-in" -->
-#### Tuples  <!-- .element: class="fragment fade-in" -->
 #### Dictionaries  <!-- .element: class="fragment fade-in" -->
 ---
 # Booleans
@@ -77,7 +76,7 @@ weight = 160.57 # storing a float
 > Strings are any sequence of characters (letters, numerals, ~($/}\#, etc.) enclosed in single or double quotes.
 
 ```py
-name = "Joe Blue"
+name = "Monty Python"
 ```
 <!-- .element: class="fragment fade-in" -->
 --
