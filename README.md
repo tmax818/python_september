@@ -1,4 +1,4 @@
-# python_august
+# python_september
 
 Welcome to the lecture notes and code. To clone this repo, click the green code button above:
 
@@ -15,13 +15,13 @@ Welcome to the lecture notes and code. To clone this repo, click the green code 
 - clone the repository to your machine
 
 ```bash
-git clone https://github.com/tmax818/python_august.git
+git clone https://github.com/tmax818/python_september.git
 ```
 
 - `cd` into the new directory
 
 ```bash
-cd python_august
+cd python_september
 ```
 
 - Open the directory with VScode.
@@ -30,4 +30,4 @@ cd python_august
 # Projects
 
 - [heroku site repo](https://github.com/tmax818/flask-ajax-322)
-- [heroku site](https://flask-ajax-322.herokuapp.com/)# python_september
+- [heroku site](https://flask-ajax-322.herokuapp.com/)
