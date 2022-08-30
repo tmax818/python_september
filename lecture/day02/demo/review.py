@@ -1,45 +1,35 @@
+dojo = {
+   'locations': ['San Jose', 'Seattle', 'Dallas', 'Chicago', 'Tulsa', 'DC', 'Burbank'],
+   'instructors': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
+}
 
-# ! data types
-
-print(type('string'))
-print(type(42))
-print(type(3.14))
-print(type(True))
-print(type(None))
-
-# ! conditionals and loops
-
-if True:
-    print('this ran')
-
-if False:
-    print("this didn't run")
-start = 0
-stop = 10
-step = 1
-for i in range(start, stop, step):
-    print(i)
-
-# ! data structures
-
-## ! dicts
-
-person = {'name': 'Tyler', 'age': 39}
-print(person['name'])
-
-my_list = ['apples', 'strawberries', 'pineapple']
-
-my_tuple = ('tyler', 39, True)
-
-# ! functions
-
-def hello():
-    print("hello")
-    return "hello"
-
-def say_hello(name):
-    print(f"Hello {name * 35}")
+def printInfo(dojoParam):
+    print(len(dojoParam['locations']), "LOCATIONS")
+    for location in dojoParam['locations']:
+        print(location)
+    print()
+    print(len(dojoParam['instructors']), "INSTRUCTORS")
+    for instructor in dojoParam['instructors']:
+        print(instructor)
 
 
-say_hello("42")
-# name = 42
+printInfo(dojo)
+# output:
+# 7 LOCATIONS
+# San Jose
+# Seattle
+# Dallas
+# Chicago
+# Tulsa
+# DC
+# Burbank
+    
+# 8 INSTRUCTORS
+# Michael
+# Amy
+# Eduardo
+# Josh
+# Graham
+# Patrick
+# Minh
+# Devon
