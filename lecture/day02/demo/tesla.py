@@ -2,6 +2,7 @@ class Tesla:
 
     CEO = 'Elon Musk'
     all_teslas = []
+    stock_price = 277
     
     ## ! Attributes go in the __init__
     def __init__(self, model, color, price):
@@ -16,10 +17,21 @@ class Tesla:
         print(f"The {self.model} is quietly driving down the road...")
     # the model 3 is quietly driving down the road...
 
+    def brake(self):
+        print("look out!!!")
+
     # ! class methods are things the class can do.
     @classmethod
     def display_teslas(cls):
         return cls.all_teslas
+
+    @classmethod
+    def set_stock_price(cls, price):
+        cls.stock_price = price
+
+    @classmethod
+    def make_tesla(cls, model, color, price):
+        Tesla(model, color, price)
 
 my_tesla = Tesla('model 3', 'red', 1000000)
 your_tesla = Tesla('model x', 'black', 1000000)

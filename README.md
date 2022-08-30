@@ -26,6 +26,9 @@ cd python_september
 
 - Open the directory with VScode.
 
+```python
+print("hello")
+```
 
 # Projects
 

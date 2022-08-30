@@ -1,5 +1,3 @@
-from tabnanny import check
-
 
 class BankAccount:
 
@@ -12,17 +10,25 @@ class BankAccount:
         
 
     def withdraw(self, amount):
-        pass
+        if self.balance >= amount:
+            self.balance -= amount
+        else:
+            self.balance -= 5
+            print(f"You just lost $5, Bro! Nice try! Your balance is now {self.display_account_info()}.")
+
 
     def display_account_info(self):
-        pass
+        print(f"Your balance is: {self.balance}")
+        return self.balance
+
 
     def yield_interest(self):
-        pass
+        self.balance += self.balance * self.int_rate
 
 checking = BankAccount()
 savings = BankAccount(.1, 200000)
 
 checking.deposit(1000)
+checking.yield_interest()
 
 print(checking.balance)
