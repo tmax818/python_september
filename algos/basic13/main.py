@@ -10,7 +10,7 @@ def print_ints_and_sum_0_to_255():
 
     for i in range(256):
         sum = sum + i
-        sprint(i)
+        print(i)
         print("this is the sum: ", sum, "this is the num: ", i)
 
 # print_ints_and_sum_0_to_255()
