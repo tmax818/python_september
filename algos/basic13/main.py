@@ -1,16 +1,28 @@
-
 ## TODO: Print all the integers from 1 to 255.
 def print_1_to_255():
-    pass
+    for i in range(1, 256):
+        print(i)
 
+# print_1_to_255()
 ## TODO: Print integers from 0 to 255, and with each integer print the sum so far.
 def print_ints_and_sum_0_to_255():
-    pass
+    sum = 0
+
+    for i in range(256):
+        sum = sum + i
+        sprint(i)
+        print("this is the sum: ", sum, "this is the num: ", i)
 
 # print_ints_and_sum_0_to_255()
 ## TODO: Given an array, find and print its largest element.
 def print_max_of_array(arr):
-    pass
+    max = arr[0]
+    for i in arr:
+        if i > max:
+            max = i
+    print(max)
+
+print_max_of_array([1,2,3,4,5,42,6,7,9])
 
 ## TODO: Create an array with all the odd integers between 1 and 255 (inclusive).
 def return_odds_array_1_to_255():
@@ -48,13 +60,13 @@ def print_average_of_array(arr):
 ## TODO: Square each value in a given array, returning that same array with changed values
 def square_array_vals(arr):
     pass
+
+
 ## TODO: Return the given array, after setting any negative values to zero.
 def zero_out_array_negative_vals(arr):
     pass
 
-print(zero_out_array_negative_vals([1, -5, 8, -9]))
+
 ## TODO: Given an array, move all values forward by one index, dropping the first and leaving a '0' value at the end.
 def shift_array_vals_left(arr):
     pass
-
-
