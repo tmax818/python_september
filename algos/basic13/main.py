@@ -31,13 +31,29 @@ def return_odds_array_1_to_255():
 
 ## TODO: Given an array and a value Y, count and print the number of array values greater than Y.
 def return_array_count_greater_thanY(arr, y):
+    count = 0
+    for el in arr:
+        if el > y:
+            count += 1
+            print(el)
+    print(count)
+    # variable to keep track of count
+    # iterate through the array 
+    # check each value against y
+    # if greater increment
+    # print variable count at the end
     pass
-
+# ! TEST:
+return_array_count_greater_thanY([23, 45, 67, 12, 42], 20)
 # return_array_count_greater_thanY(return_odds_array_1_to_255(), 163)
 ## TODO: Given an array, print the max, min and average values for that array.
 def printMaxMin_average_array_vals(arr):
-    pass
+    sum = 0
+    for i in arr:
+        sum += i
+    print(sum)
 
+printMaxMin_average_array_vals([1,2,3,4,5])
 ## TODO: Replace any negative array values with 'Dojo'.
 def swapStringFor_array_negative_vals(arr):
     pass
