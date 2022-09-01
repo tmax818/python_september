@@ -32,6 +32,16 @@ class Tesla:
     @classmethod
     def make_tesla(cls, model, color, price):
         Tesla(model, color, price)
+        cls(model, color, price)
 
+    @staticmethod
+    def change_tire(tesla):
+        print("I fixed the tire on your {tesla} ")
+
+    
 my_tesla = Tesla('model 3', 'red', 1000000)
 your_tesla = Tesla('model x', 'black', 1000000)
+
+custom_tesla = Tesla.make_tesla('model s', 'white', 100000000)
+
+Tesla.change_tire(my_tesla)
