@@ -1,31 +1,36 @@
-from flask import Flask, render_template, request, redirect, session
+from flask import Flask, render_template, redirect, request, session
 
 app = Flask(__name__)
-app.secret_key = "Any string you want"
+app.secret_key = "any string you want..."
+
 
 @app.route('/')
 def index():
+    if 'count' not in session:
+        session['count'] = 0
+    else:
+        session['count'] += 1
+
     return render_template('index.html')
-
-@app.route('/form', methods=['post'])
-def handle_form():
-    print(request.form['key'])
-    session['data'] = request.form
-    return redirect('/')
-
-@app.route('/clear')
-def clear():
-    session.clear()
-    return redirect('/')
 
 @app.route('/up')
 def up():
-    if 'count' in session:
-        session['count'] += 1
-    else:
-        session['count'] = 1
+    session['count'] += 2
     return redirect('/')
 
 
-if __name__=="__main__":     
-    app.run(debug=True)   
+@app.route('/handle_form', methods = ['POST'])
+def handle_form():
+    print(request.form)
+    session['key'] = request.form['key']
+    return redirect('/')
+
+@app.route('/clear')
+def clear_session():
+    session.clear()
+    return redirect('/')
+
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
