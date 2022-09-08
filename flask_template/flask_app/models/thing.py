@@ -1,4 +1,4 @@
-from mysqlconnection import connectToMySQL
+from flask_app.config.mysqlconnection import connectToMySQL
 from pprint import pprint
 
 DATABASE = 'schema_name'
@@ -39,6 +39,18 @@ class Thing:
         result = connectToMySQL(DATABASE).query_db(query, data)
         thing = Thing(result[0])
         return thing
+
+    # ! UPDATE
+    @classmethod
+    def update(cls,data):
+        query = "UPDATE things SET column1 = %(column1)s, column2 = %(column2)s,column3 = %(column3)s,column4 = %(column4)s WHERE id = %(id)s;"
+        return connectToMySQL(DATABASE).query_db(query, data)
+
+    # ! DELETE
+    @classmethod
+    def destroy(cls,data):
+        query = "DELETE FROM things WHERE id = %(id)s;"
+        return connectToMySQL(DATABASE).query_db(query, data)
 
 
 
