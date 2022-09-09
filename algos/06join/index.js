@@ -33,4 +33,7 @@ const expected5 = "";
  * @param {string} separator To separate each item of the given arr.
  * @returns {string} The given array items as a string separated by the given separator.
  */
-function join(arr, separator) {}
+function join(arr, separator=", ") {}
+
+join(arr1)
+join(arr2, separator2)
