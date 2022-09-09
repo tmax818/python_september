@@ -1,5 +1,7 @@
 -- Query: Create 3 new dojos
 
+INSERT INTO dojos (name) VALUES ('Burbank', 'San Jose', 'Las Vegas')
+
 -- Query: Delete the 3 dojos you just created
 
 -- Query: Create 3 more dojos
