@@ -13,6 +13,9 @@ class Ninja:
         self.dojo_id = data['dojo_id']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
+        
+    def do_something_cool(self):
+        return "I'm cool"
 
 
     # ! CREATE
@@ -51,6 +54,8 @@ class Ninja:
     def destroy(cls,data):
         query = "DELETE FROM ninjas WHERE id = %(id)s;"
         return connectToMySQL(DATABASE).query_db(query, data)
+    
+    
 
 
 

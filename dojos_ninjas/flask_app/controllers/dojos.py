@@ -19,7 +19,7 @@ def handle_new_dojo():
 @app.route('/dojo/<int:id>')
 def show(id):
     data = {'id': id}
-    return render_template('show.html', dojo=Dojo.get_one(data))
+    return render_template('show.html', dojo=Dojo.get_one_with_ninjas(data))
 
 
 # ! READ/RETRIEVE ALL

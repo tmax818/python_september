@@ -9,15 +9,34 @@
     <title>Document</title>
 </head>
 <body>
-    {{dojo.created_at}}
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">{{dojo.name}}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
-        </div>
-      </div>
+    {{dojo.ninjas}}
+    <h5 class="card-title">{{dojo.name}}'s Ninjas</h5>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">age</th>
+          <th scope="col">Actions</th>
+
+        </tr>
+      </thead>
+      <tbody>
+          {% for ninja in dojo.ninjas  %}
+          <tr>
+            <th scope="row">{{ninja.id}}</th>
+            <td>{{ninja.first_name}}</td>
+            <td>{{ninja.last_name}}</td>
+            <td>{{ninja.age}}</td>
+            <td><a href="/ninja/{{ninja.id}}">show</a>|<a href="/edit/{{ninja.id}}">edit</a>| <a href="/delete/{{ninja.id}}">delete</a></td>
+
+          </tr>
+          {% endfor %}
+
+      </tbody>
+    </table>
+
+
 </body>
 </html>
