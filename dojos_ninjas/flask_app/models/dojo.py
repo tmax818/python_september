@@ -1,6 +1,8 @@
 from flask_app.config.mysqlconnection import connectToMySQL
 from pprint import pprint
 
+# TODO import the Ninja class to be used below
+
 DATABASE = 'dojos_ninjas'
 
 class Dojo:
@@ -8,6 +10,7 @@ class Dojo:
     def __init__(self, data) -> None:
         self.id = data['id']
         self.name = data['name']
+        # TODO Create an instance attribute to hold all ninjas(i.e. a list)
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
 
@@ -50,4 +53,20 @@ class Dojo:
         return connectToMySQL(DATABASE).query_db(query, data)
 
 
+    # TODO create a class method to retrive all the ninjas that belong to a certain dojo
 
+    # TODO write a join sql query to get a dojo and all its ninjas
+
+    # TODO the query will be a list of dictionaries. Each dictionary will contain all the attributes of the dojo and one of the dojo's ninjas.
+
+    # TODO create an instance of the dojo class that will have the ninjas attribute. The attribute is a list of all that dojo's ninjas
+
+    # TODO loop over the list of dictionaries returned from the database.
+
+    # TODO create a dictionary to hold and format the ninja's data from each dictionary.
+
+    # TODO append `ninjas.`to the attributes where needed:
+
+    # TODO once the dictionary is created for each ninjas, append it to the ninjas attribute list. Inside the append method, convert the dictionary created in the previous step to an instance of the ninja class.
+
+    # TODO finally, return the dojo created above. It will contain the ninjas attribute created in the for loop above.
