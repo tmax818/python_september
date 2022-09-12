@@ -27,7 +27,7 @@ def register():
     session['first_name'] = request.form['first_name']
     session['last_name'] = request.form['last_name']
     
-    return redirect('/things')
+    return redirect('/recipes')
 
 @app.route("/login", methods=['POST'])
 def login():
@@ -44,7 +44,7 @@ def login():
     session['user_id'] = user.id
     session['first_name'] = user.first_name
     session['last_name'] = user.last_name 
-    return redirect('/things')
+    return redirect('/recipes')
 
 @app.route('/logout')
 def logout():

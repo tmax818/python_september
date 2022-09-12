@@ -1,4 +1,4 @@
-from flask_app import app, render_template, request, redirect
+from flask_app import app, render_template, request, redirect,session
 from flask_app.models.thing import Thing
 
 # ! CREATE
@@ -26,7 +26,7 @@ def show(id):
 
 @app.route('/things')
 def things():
-    return "It worked, Dude!!!"
+    return f"It worked,{session['first_name']} {session['last_name']} !!!"
     # return render_template('things.html', things = Thing.get_all())
 
 # ! UPDATE

@@ -6,7 +6,7 @@ import re	# the regex module
 # create a regular expression object that we'll use later   
 EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$') 
 
-DATABASE = 'schema_name'
+DATABASE = 'recipes'
 
 class User:
 
