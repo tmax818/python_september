@@ -3,8 +3,8 @@ from flask_app.models.thing import Thing
 
 # ! CREATE
 
-@app.route("/")
-def index():
+@app.route("/thing/new")
+def thing_new():
     # call the get all classmethod to get all friends
     return render_template("index.html")
 
@@ -26,7 +26,8 @@ def show(id):
 
 @app.route('/things')
 def things():
-    return render_template('things.html', things = Thing.get_all())
+    return "It worked, Dude!!!"
+    # return render_template('things.html', things = Thing.get_all())
 
 # ! UPDATE
 
