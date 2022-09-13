@@ -26,6 +26,8 @@ def show(id):
 
 @app.route('/recipes')
 def recipes():
+    if 'user_id' not in session:
+        return redirect('/logout')
     return render_template('recipes.html', recipes=Recipe.get_all())
 
 # ! UPDATE

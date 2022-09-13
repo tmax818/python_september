@@ -46,6 +46,11 @@ def login():
     session['last_name'] = user.last_name 
     return redirect('/recipes')
 
+@app.route('/show/user')
+def show_user():
+    data = {'id': session['user_id']}
+    return render_template('show_user.html', user = User.get_one_with_recipes(data))
+
 @app.route('/logout')
 def logout():
     session.clear()

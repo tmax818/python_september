@@ -13,6 +13,8 @@ class Recipe:
         self.date_made = data['date_made']
         self.under_30 = data['under_30']
         self.user_id = data['user_id']
+        if 'first_name' in data:
+            self.first_name = data['first_name']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
 
@@ -26,7 +28,7 @@ class Recipe:
     # ! READ ALL
     @classmethod
     def get_all(cls):
-        query = "SELECT * FROM recipes"
+        query = "SELECT recipes.*, first_name FROM recipes JOIN users ON users.id = recipes.user_id;"
         results = connectToMySQL(DATABASE).query_db(query)
         pprint(results)
         recipes = []
